@@ -1,5 +1,6 @@
 import React from 'react'
-import Message from './Message'
+import Messages from './Messages'
+import MessageUnreadUnstarred from './MessageUnreadUnstarred'
 // import 'bootstrap/dist/css/bootstrap.css'
 // import 'bootstrap/dist/css/bootstrap-theme.css'
 // import 'font-awesome/css/font-awesome.css'
@@ -7,12 +8,18 @@ import Message from './Message'
 class MessageList extends React.Component {
 
   //constructor?
+  constructor(props) {
+    super(props)
+    this.state = { items: props.messages }
+    console.log('this state from MessageList: ', this.state);
+  }
+
 
   //render
   render() {
     return (
       <div>
-        <Message />
+        <MessageUnreadUnstarred props = { this.state.items } />
       </div>
     )
   }
@@ -20,4 +27,4 @@ class MessageList extends React.Component {
 }
 
 
-export default Message
+export default MessageList

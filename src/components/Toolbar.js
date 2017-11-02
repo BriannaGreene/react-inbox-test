@@ -8,6 +8,13 @@ class Toolbar extends React.Component {
   //constructor?
 
   //render
+  render() {
+    return (
+      <div>
+        <h3>HEllo</h3>
+      </div>
+    )
+  }
 
 }
 

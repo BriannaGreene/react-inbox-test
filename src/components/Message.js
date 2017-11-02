@@ -8,6 +8,13 @@ class Message extends React.Component {
   //constructor?
 
   //render
+  render() {
+    return (
+      <div>
+        <h3>This is a message</h3>
+      </div>
+    )
+  }
 
 }
 
